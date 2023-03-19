@@ -9,7 +9,7 @@ function RowPost(props) {
   const [movieVedio ,setMovieVedio ] = useState()
   const [movieVedioDisplay,setmovieVedioDisplay] = useState(false)
 
-  useEffect(() => {
+  useEffect((props) => {
     Axios.get(props.url).then((res) => {
         setMovie(res.data.results);
       }).catch((err) => {
